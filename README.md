@@ -102,6 +102,14 @@ python example_4_webhook_receiver.py
 python main.py
 ```
 
+### Additional Business Scenarios
+The repository also includes extra examples that mix email and SMS:
+1. **Monthly Box Order** (`monthly_box_example/`)
+2. **Car Service Reminder** (`car_service_example/`)
+3. **Event Registration** (`event_registration_example/`)
+4. **Support Ticket Notifier** (`support_ticket_example/`)
+5. **Restaurant Reservation** (`restaurant_reservation_example/`)
+
 ## 🔧 Configuration Details
 
 ### Environment Variables
@@ -191,6 +199,10 @@ After completing these examples, students can explore:
 - Twilio Flex for contact centers
 - Twilio SendGrid for email
 - Building chatbots with Twilio Studio
+
+## Repository Notes
+- Added a working email demo in `email_system/`
+- Filled the empty requirements in `callmebot_whatsapp_example`
 
 ## 📄 License
 
