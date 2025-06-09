@@ -27,6 +27,10 @@ Refer to the [README](../README.md) for setup instructions.
 - **[email_system/](../email_system/)** – tiny Flask app for sending emails.
 - **[callmebot_whatsapp_example/](../callmebot_whatsapp_example/)** – examples for sending WhatsApp messages with CallMeBot.
 - **[dentist_sms_system/](../dentist_sms_system/)** – advanced appointment reminders with two‑way SMS.
+- **[real_estate_showing_example/](../real_estate_showing_example/)** – schedule property showings and notify buyers.
+- **[gym_membership_example/](../gym_membership_example/)** – send renewal reminders to gym members.
+- **[farm_irrigation_example/](../farm_irrigation_example/)** – alert farmers in Lethbridge when crops need watering.
+- **[clinic_follow_up_example/](../clinic_follow_up_example/)** – email post‑visit instructions and SMS confirmations.
 
 ### Utilities
 
