@@ -3,7 +3,7 @@
 
 # Twilio Python Teaching Examples
 
-Welcome to **ULDataProfessor/sms-email-examples**! This collection showcases many different ways to integrate Twilio with Python. Each folder or file below links directly to the source so you can jump right into the code.
+Welcome to **ULDataProfessor/sms-email-examples**! This collection showcases many different ways to integrate Twilio with Python. Each link below points to a detailed documentation page so you can explore the code and workflow.
 
 Refer to the [README](../README.md) for setup instructions.
 
@@ -11,26 +11,26 @@ Refer to the [README](../README.md) for setup instructions.
 
 ### Core Scripts
 
-- **[example_1_simple_sms.py](../example_1_simple_sms.py)** – send a single SMS message using environment variables.
-- **[example_2_interactive_menu.py](../example_2_interactive_menu.py)** – a command‑line menu that sends different message types.
-- **[example_3_bulk_sms.py](../example_3_bulk_sms.py)** – demonstrates batch messaging and tracking.
-- **[example_4_webhook_receiver.py](../example_4_webhook_receiver.py)** – Flask application that receives SMS webhooks and replies.
-- **[main.py](../main.py)** – full web application that texts jokes and advice to a user.
+- **[Simple SMS](example_1_simple_sms.md)** – send a single SMS message using environment variables.
+- **[Interactive Menu](example_2_interactive_menu.md)** – a command‑line menu that sends different message types.
+- **[Bulk SMS](example_3_bulk_sms.md)** – demonstrates batch messaging and tracking.
+- **[Webhook Receiver](example_4_webhook_receiver.md)** – Flask application that receives SMS webhooks and replies.
+- **[SMS Web App](main.md)** – full web application that texts jokes and advice to a user.
 
 ### Business Scenario Folders
 
-- **[monthly_box_example/](../monthly_box_example/)** – order confirmation and SMS for a subscription box.
-- **[car_service_example/](../car_service_example/)** – email confirmation and scheduled service reminder texts.
-- **[event_registration_example/](../event_registration_example/)** – confirms event registration by email and sends a reminder SMS.
-- **[support_ticket_example/](../support_ticket_example/)** – notifies customers and support staff when a ticket is created.
-- **[restaurant_reservation_example/](../restaurant_reservation_example/)** – collects reservation info and sends a same‑day reminder.
-- **[email_system/](../email_system/)** – tiny Flask app for sending emails.
-- **[callmebot_whatsapp_example/](../callmebot_whatsapp_example/)** – examples for sending WhatsApp messages with CallMeBot.
-- **[dentist_sms_system/](../dentist_sms_system/)** – advanced appointment reminders with two‑way SMS.
-- **[real_estate_showing_example/](../real_estate_showing_example/)** – schedule property showings and notify buyers.
-- **[gym_membership_example/](../gym_membership_example/)** – send renewal reminders to gym members.
-- **[farm_irrigation_example/](../farm_irrigation_example/)** – alert farmers in Lethbridge when crops need watering.
-- **[clinic_follow_up_example/](../clinic_follow_up_example/)** – email post‑visit instructions and SMS confirmations.
+- **[Monthly Box Example](monthly_box_example.md)** – order confirmation and SMS for a subscription box.
+- **[Car Service Example](car_service_example.md)** – email confirmation and scheduled service reminder texts.
+- **[Event Registration Example](event_registration_example.md)** – confirms event registration by email and sends a reminder SMS.
+- **[Support Ticket Example](support_ticket_example.md)** – notifies customers and support staff when a ticket is created.
+- **[Restaurant Reservation Example](restaurant_reservation_example.md)** – collects reservation info and sends a same‑day reminder.
+- **[Email System](email_system.md)** – tiny Flask app for sending emails.
+- **[CallMeBot WhatsApp Example](callmebot_whatsapp_example.md)** – examples for sending WhatsApp messages with CallMeBot.
+- **[Dentist SMS System](dentist_sms_system.md)** – advanced appointment reminders with two‑way SMS.
+- **[Real Estate Showing Example](real_estate_showing_example.md)** – schedule property showings and notify buyers.
+- **[Gym Membership Example](gym_membership_example.md)** – send renewal reminders to gym members.
+- **[Farm Irrigation Example](farm_irrigation_example.md)** – alert farmers in Lethbridge when crops need watering.
+- **[Clinic Follow Up Example](clinic_follow_up_example.md)** – email post‑visit instructions and SMS confirmations.
 
 ### Utilities
 
@@ -38,3 +38,4 @@ Refer to the [README](../README.md) for setup instructions.
 - Templates for the web app live in **[templates/](../templates/)**.
 
 This documentation points to the full source so you can explore and experiment with each workflow.
+
