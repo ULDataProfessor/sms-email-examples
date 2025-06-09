@@ -1,0 +1,12 @@
+# CallMeBot WhatsApp API Configuration
+# Get your phone number and API key from https://wa.me/34644224527
+# Send the message "I allow callmebot to send me messages" to get your API key
+
+# Your WhatsApp phone number (with country code, no + sign)
+WHATSAPP_PHONE_NUMBER=1234567890
+
+# Your CallMeBot API key (get this by messaging the bot)
+CALLMEBOT_API_KEY=your_api_key_here
+
+# Optional: Webhook secret for security
+WEBHOOK_SECRET=my_secret_key 

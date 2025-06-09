@@ -1,0 +1,8 @@
+# Twilio Configuration
+# Get these from your Twilio Console (https://console.twilio.com)
+TWILIO_ACCOUNT_SID=your_account_sid_here
+TWILIO_AUTH_TOKEN=your_auth_token_here
+TWILIO_PHONE_NUMBER=+1
+
+# Optional: Special test numbers (for demo purposes)
+SPECIAL_PHONE_NUMBER=+1234567890 
