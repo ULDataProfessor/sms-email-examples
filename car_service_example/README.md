@@ -1,8 +1,31 @@
 # 🚗 Car Service Reminder
 
-This script collects customer contact information and a service date. It sends an email confirmation and an SMS reminder using Twilio.
+This example simulates an auto shop that collects customer contact details and a service date. It sends an email confirmation immediately and schedules an SMS reminder before the appointment.
 
-## Steps
-1. Copy `env_example.txt` to `.env` and fill in credentials.
-2. Install dependencies with `pip install -r requirements.txt`.
-3. Run `python service_reminder.py` and follow the prompts.
+## How It Works
+1. The script prompts for the customer's phone number, email, and desired service date.
+2. An email confirmation is sent using the SMTP settings from your `.env` file.
+3. A Twilio SMS reminder is scheduled for the day before the service.
+
+## Environment Variables
+Create a `.env` file from `env_example.txt` and provide these values:
+
+| Variable | Description |
+|----------|-------------|
+| `TWILIO_ACCOUNT_SID` | Your Twilio account SID used to authenticate API calls. |
+| `TWILIO_AUTH_TOKEN` | Auth token paired with the SID. |
+| `TWILIO_PHONE_NUMBER` | Twilio phone number that sends reminders. |
+| `EMAIL_HOST` | SMTP server address (e.g., `smtp.gmail.com`). |
+| `EMAIL_PORT` | Port for the SMTP server. |
+| `EMAIL_USE_TLS` | `True` if the server requires TLS. |
+| `EMAIL_USERNAME` | Username or email address for SMTP authentication. |
+| `EMAIL_PASSWORD` | Password or app password for SMTP authentication. |
+| `COMPANY_NAME` | Name displayed in confirmation messages. |
+| `COMPANY_EMAIL` | Sender address for confirmation emails. |
+
+## Running
+```bash
+pip install -r requirements.txt
+python service_reminder.py
+```
+Follow the prompts to schedule a reminder.

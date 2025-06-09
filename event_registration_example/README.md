@@ -1,8 +1,30 @@
 # 🎫 Event Registration Example
 
-A simple registration demo that emails a ticket and sends a quick SMS reminder when a user signs up.
+This folder contains a short script that mimics registering a user for an event. When `event_notifier.py` runs it asks for the attendee's contact information, sends a ticket via email, and texts them a reminder using Twilio.
+
+## How It Works
+1. User details are collected on the command line.
+2. A confirmation email is sent through your SMTP server.
+3. A Twilio SMS reminder is sent with the event information.
+
+## Environment Variables
+Copy `env_example.txt` to `.env` and set these variables:
+
+| Variable | Description |
+|----------|-------------|
+| `TWILIO_ACCOUNT_SID` | Your Twilio account SID. |
+| `TWILIO_AUTH_TOKEN` | Auth token for Twilio. |
+| `TWILIO_PHONE_NUMBER` | Twilio number that sends the reminder. |
+| `EMAIL_HOST` | Address of your SMTP server. |
+| `EMAIL_PORT` | Port number for SMTP. |
+| `EMAIL_USE_TLS` | Use TLS (`True` or `False`). |
+| `EMAIL_USERNAME` | SMTP username or email. |
+| `EMAIL_PASSWORD` | SMTP password or app password. |
+| `COMPANY_NAME` | Name of the organization hosting the event. |
+| `COMPANY_EMAIL` | Sender address for confirmation emails. |
 
 ## Usage
-1. Configure `.env` using the provided template.
-2. Install dependencies with `pip install -r requirements.txt`.
-3. Run `python event_notifier.py` to simulate a registration.
+```bash
+pip install -r requirements.txt
+python event_notifier.py
+```

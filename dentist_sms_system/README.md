@@ -32,7 +32,6 @@ cp env_example.txt .env
 
 # Edit .env with your credentials
 ```
-
 Required environment variables:
 ```
 TWILIO_ACCOUNT_SID=your_account_sid_here
@@ -41,6 +40,16 @@ TWILIO_PHONE_NUMBER=+1234567890
 OFFICE_NAME=Your Dental Office
 OFFICE_PHONE=+1234567890
 ```
+
+**Variable descriptions**
+
+| Variable | Purpose |
+|----------|---------|
+| `TWILIO_ACCOUNT_SID` | Twilio account identifier used for API calls. |
+| `TWILIO_AUTH_TOKEN` | Authentication token paired with the SID. |
+| `TWILIO_PHONE_NUMBER` | Twilio number that sends appointment reminders. |
+| `OFFICE_NAME` | Name of the dental practice shown in messages. |
+| `OFFICE_PHONE` | Contact phone number displayed to patients. |
 
 ### 3. Get Twilio Credentials
 
