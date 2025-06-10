@@ -15,6 +15,14 @@ The example is designed for classroom use so students can experiment with WhatsA
 2. `webhook_server.py` receives POST requests at `/webhook/*` and uses `WhatsAppSender` to deliver the messages.
 3. You can run the server locally and expose it with ngrok for testing.
 
+### Sending a Message
+```python
+sender = WhatsAppSender()
+result = sender.send_message("Hello from CallMeBot!")
+if result["success"]:
+    print("Sent", result["phone"])
+```
+
 ## Environment Variables
 Create a `.env` file based on `env_example.txt` and set the following values:
 
@@ -31,4 +39,3 @@ pip install -r requirements.txt
 python webhook_server.py
 ```
 Visit `http://localhost:5000/webhook/test` to send a test message. Use `ngrok http 5000` if you want to receive webhooks from external services.
-

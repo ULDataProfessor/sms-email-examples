@@ -8,7 +8,14 @@ This demo shows how a real estate agent might schedule property showings. When y
 ## How It Works
 1. Prompt the agent for buyer contact details and showing info.
 2. Send an email with the date, time and address of the showing.
-3. Text the buyer a short reminder using Twilio.
+3. Text the buyer with the same information as a reminder.
+
+### Snippet
+```python
+email_subject = f"Showing Scheduled for {address}"
+send_email(email, email_subject, email_body)
+send_sms(phone, f"Reminder: showing at {address} on {when}.")
+```
 
 ## Environment Variables
 Copy `env_example.txt` to `.env` and fill in the following values:
@@ -31,4 +38,3 @@ Copy `env_example.txt` to `.env` and fill in the following values:
 pip install -r requirements.txt
 python showing_notification.py
 ```
-

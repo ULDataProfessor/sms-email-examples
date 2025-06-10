@@ -8,7 +8,14 @@ This script simulates a customer subscribing to a monthly box. It collects the c
 ## How It Works
 1. The user enters their contact information when running `order_system.py`.
 2. The script uses your SMTP settings to send an email confirmation.
-3. A Twilio SMS is sent to let the customer know their first box is on the way.
+3. It follows up with a text message letting them know the order was received.
+
+### Sample
+```python
+email_subject = f"Thanks for your order from {COMPANY_NAME}"
+send_email(email, email_subject, "Your first box ships soon!")
+send_sms(phone, "Order received! We'll notify you when it ships.")
+```
 
 ## Environment Variables
 Copy `env_example.txt` to `.env` and define the following:
@@ -31,4 +38,3 @@ Copy `env_example.txt` to `.env` and define the following:
 pip install -r requirements.txt
 python order_system.py
 ```
-

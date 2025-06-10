@@ -17,6 +17,17 @@ This minimal Flask app demonstrates sending email through an SMTP server. When y
    ```
 4. Open `http://localhost:5001` in your browser and submit your email address to test it.
 
+### Core Logic
+```python
+@app.route("/", methods=["GET", "POST"])
+def index():
+    if request.method == "POST":
+        address = request.form["email"]
+        send_email(address, "Welcome!", "Thanks for trying the demo.")
+        return render_template("index.html", sent=True)
+    return render_template("index.html")
+```
+
 ## Environment Variables
 The application expects these values in your `.env` file:
 
@@ -33,4 +44,3 @@ The application expects these values in your `.env` file:
 | `SUPPORT_EMAIL` | Contact address for support inquiries. |
 | `FLASK_SECRET_KEY` | Secret key for Flask sessions. |
 | `FLASK_PORT` | Port number for running the app. |
-

@@ -10,6 +10,12 @@
 2. Email them a friendly reminder to renew.
 3. Text them the same information via SMS.
 
+### Code Sample
+```python
+sms_text = f"Reminder: your {COMPANY_NAME} membership renews on {due_date}."
+send_sms(phone, sms_text)
+```
+
 ## Environment Variables
 Copy `env_example.txt` to `.env` and set these values:
 
@@ -31,4 +37,3 @@ Copy `env_example.txt` to `.env` and set these values:
 pip install -r requirements.txt
 python membership_reminder.py
 ```
-

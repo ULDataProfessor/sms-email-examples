@@ -8,7 +8,14 @@ This example simulates taking a reservation for a restaurant. When you run `rese
 ## How It Works
 1. The script asks for the guest name, phone number, email address, and reservation time.
 2. An email confirmation is sent using your SMTP settings.
-3. A Twilio SMS reminder is sent on the day of the reservation.
+3. The guest also receives an SMS reminder.
+
+### Reservation Code
+```python
+email_subject = f"{COMPANY_NAME} Reservation Confirmed"
+send_email(email, email_subject, email_body)
+send_sms(phone, f"Reminder: reservation at {COMPANY_NAME} on {date} at {time}.")
+```
 
 ## Environment Variables
 After copying `env_example.txt` to `.env`, set the following:
@@ -31,4 +38,3 @@ After copying `env_example.txt` to `.env`, set the following:
 pip install -r requirements.txt
 python reservation_system.py
 ```
-

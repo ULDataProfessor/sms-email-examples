@@ -8,7 +8,14 @@ After a medical appointment, clinics often send instructions to patients. `follo
 ## How It Works
 1. Enter the patient's phone, email and procedure name.
 2. The script emails follow-up instructions for that procedure.
-3. It also sends an SMS confirmation.
+3. It also sends a short confirmation text.
+
+### Code Snippet
+```python
+instructions = f"Thank you for visiting. Here are your {procedure} instructions."
+send_email(email, f"{procedure} Follow-Up", instructions)
+send_sms(phone, "We emailed your instructions.")
+```
 
 ## Environment Variables
 Copy `env_example.txt` to `.env` and configure:
@@ -31,4 +38,3 @@ Copy `env_example.txt` to `.env` and configure:
 pip install -r requirements.txt
 python follow_up_sender.py
 ```
-
