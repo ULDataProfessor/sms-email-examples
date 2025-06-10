@@ -10,6 +10,14 @@ Designed for a farm near Lethbridge, Alberta, this example triggers an SMS and e
 2. Provide the field identifier and soil moisture percentage.
 3. If moisture is under 25%, a warning is sent via Twilio and email.
 
+### Snippet
+```python
+if moisture < 25:
+    msg = f"Irrigation needed in {field}! Moisture at {moisture}%."
+    send_sms(phone, msg)
+    send_email(email, "Irrigation Alert", msg)
+```
+
 ## Environment Variables
 Copy `env_example.txt` to `.env` and set:
 
@@ -30,4 +38,3 @@ Copy `env_example.txt` to `.env` and set:
 pip install -r requirements.txt
 python irrigation_alerts.py
 ```
-

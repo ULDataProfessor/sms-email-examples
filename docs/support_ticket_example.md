@@ -8,7 +8,13 @@ This example mimics a help desk system. Running `ticket_notifier.py` prompts the
 ## How It Works
 1. The script collects the customer's name, phone number, and a brief description of the issue.
 2. An email is sent to the customer and support team using your SMTP configuration.
-3. A confirmation SMS is sent to the customer using Twilio.
+3. A confirmation text is delivered to the customer.
+
+### Code Excerpt
+```python
+sms_text = f"Support ticket received: '{issue}'. We'll be in touch."
+send_sms(customer_phone, sms_text)
+```
 
 ## Environment Variables
 Create `.env` from `env_example.txt` and configure these values:
@@ -32,4 +38,3 @@ Create `.env` from `env_example.txt` and configure these values:
 pip install -r requirements.txt
 python ticket_notifier.py
 ```
-

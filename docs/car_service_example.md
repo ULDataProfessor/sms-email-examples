@@ -8,7 +8,13 @@ This example simulates an auto shop that collects customer contact details and a
 ## How It Works
 1. The script prompts for the customer's phone number, email, and desired service date.
 2. An email confirmation is sent using the SMTP settings from your `.env` file.
-3. A Twilio SMS reminder is scheduled for the day before the service.
+3. A text reminder is then delivered to the customer's phone.
+
+### Sending the Reminder
+```python
+sms_text = f"Reminder: your car service on {date} at {COMPANY_NAME}."
+send_sms(phone, sms_text)
+```
 
 ## Environment Variables
 Create a `.env` file from `env_example.txt` and provide these values:
@@ -32,4 +38,3 @@ pip install -r requirements.txt
 python service_reminder.py
 ```
 Follow the prompts to schedule a reminder.
-
