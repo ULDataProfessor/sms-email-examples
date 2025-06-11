@@ -1,0 +1,8 @@
+pandas
+requests
+xgboost
+scikit-learn
+holidays
+fastapi
+uvicorn
+joblib
