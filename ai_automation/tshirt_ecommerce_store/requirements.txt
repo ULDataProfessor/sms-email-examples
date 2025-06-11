@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+stripe
+requests
+boto3
+python-dotenv
+# sqlite3 is included in Python standard library
