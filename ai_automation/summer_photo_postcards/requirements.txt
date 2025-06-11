@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+stripe
+requests
+boto3
+google-cloud-storage
+python-dotenv
