@@ -1,0 +1,5 @@
+pytesseract
+Pillow
+pandas
+sqlite3
+pdf2image
