@@ -1,4 +1,21 @@
-// Basic frontend JS placeholder
+// Basic frontend JS
 console.log('PWA loaded');
 
-// TODO: implement fetch helpers with JWT tokens
+export function showSpinner() {
+  document.querySelectorAll('.spinner').forEach(el => el.style.display = 'block');
+}
+
+export function hideSpinner() {
+  document.querySelectorAll('.spinner').forEach(el => el.style.display = 'none');
+}
+
+export function validateForm(form) {
+  for (const input of form.querySelectorAll('input[required]')) {
+    if (!input.value) {
+      input.classList.add('error');
+      return false;
+    }
+    input.classList.remove('error');
+  }
+  return true;
+}

@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from models import db, User, Deck
+from schemas import RegisterSchema, LoginSchema
 import random
 
 auth_bp = Blueprint('auth', __name__)
@@ -9,10 +10,10 @@ auth_bp = Blueprint('auth', __name__)
 
 @auth_bp.route('/register', methods=['POST'])
 def register():
-    data = request.get_json()
-    username = data.get('username')
-    email = data.get('email')
-    password = data.get('password')
+    data = RegisterSchema().load(request.get_json() or {})
+    username = data['username']
+    email = data['email']
+    password = data['password']
 
     if User.query.filter((User.username == username) | (User.email == email)).first():
         return jsonify({'msg': 'User exists'}), 400
@@ -27,9 +28,9 @@ def register():
 
 @auth_bp.route('/login', methods=['POST'])
 def login():
-    data = request.get_json()
-    username = data.get('username')
-    password = data.get('password')
+    data = LoginSchema().load(request.get_json() or {})
+    username = data['username']
+    password = data['password']
 
     user = User.query.filter_by(username=username).first()
     if not user or not check_password_hash(user.password_hash, password):

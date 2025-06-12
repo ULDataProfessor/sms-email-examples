@@ -1,6 +1,8 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, current_app
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from models import db, Message
+from schemas import MessageSchema
+from flask_socketio import emit
 
 messages_bp = Blueprint('messages', __name__)
 
@@ -9,10 +11,15 @@ messages_bp = Blueprint('messages', __name__)
 @jwt_required()
 def send_message():
     user_id = get_jwt_identity()
-    data = request.get_json()
+    data = MessageSchema().load(request.get_json() or {})
     msg = Message(sender_id=user_id, recipient_id=data['recipient_id'], body=data['body'])
     db.session.add(msg)
     db.session.commit()
+    emit('message', {
+        'from': user_id,
+        'body': data['body'],
+        'id': msg.id
+    }, room=f'user-{data["recipient_id"]}', namespace='/', broadcast=True)
     return jsonify({'msg': 'sent'})
 
 
