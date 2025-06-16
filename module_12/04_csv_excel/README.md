@@ -1,10 +1,13 @@
 # CSV & Excel Automation
 
-**Objective:**  
-Write a script that:
-- Reads `sales.csv` into Pandas
-- Performs simple aggregation (total, average per region)
-- Exports the result to `summary.xlsx` with two worksheets: “raw” and “summary”
+## Project Overview
+This example processes a sales CSV file and generates an Excel workbook containing both the raw data and a summary table. It demonstrates simple aggregation and export features using pandas.
 
-**Codex Prompt:**  
-“Create a Python script using Pandas that reads `sales.csv`, computes total and average sales by region, then writes both the original data and the aggregated summary into `summary.xlsx`, each on its own sheet.”
+## Variables
+`CSV_FILE` identifies the input CSV while `OUTPUT_FILE` is the Excel file written by `process_sales.py`. Adjust these constants if your files live elsewhere or you want a different output name.
+
+## Instructions
+Install pandas with `pip install pandas` and place `sales.csv` in this directory. Running `python process_sales.py` will create `summary.xlsx` with two sheets: `raw` (the original data) and `summary` (total and average sales by region).
+
+## Explanation
+The script reads the CSV using `pandas.read_csv` and uses `groupby` to aggregate totals. `pandas.ExcelWriter` then writes both the raw and summarized data to a single workbook. This simple pattern can be adapted for more elaborate reporting tasks.

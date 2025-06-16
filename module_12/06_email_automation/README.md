@@ -1,10 +1,13 @@
 # Email Automation
 
-**Objective:**  
-Send a daily summary email:
-- Read `summary.xlsx`
-- Attach it to an email
-- Send via `smtplib` from `me@example.com` to a list of recipients
+## Project Overview
+`send_summary_email.py` sends a spreadsheet via email to a list of recipients. It can be scheduled to distribute automated daily or weekly reports.
 
-**Codex Prompt:**  
-“Generate a Python script that uses `smtplib` and `email.mime` to send `summary.xlsx` as an attachment. Use SMTP server `smtp.example.com`, authenticate with environment variables, and send to multiple recipients.”
+## Variables
+The script expects environment variables for SMTP credentials and the recipient list. `SMTP_SERVER`, `FROM_ADDR`, and `ATTACHMENT` are constants pointing to the mail server, the sender address and the file to attach.
+
+## Instructions
+Install the `python-dotenv` package to load environment variables from a `.env` file. Populate `SMTP_USER`, `SMTP_PASSWORD` and `RECIPIENTS` in that file, then run `python send_summary_email.py`. The script logs in to the SMTP server and sends the email with `summary.xlsx` attached.
+
+## Explanation
+A multipart email is composed with `email.mime`. The attachment is read in binary mode and encoded before sending via SMTP. Because recipients are read from the environment, you can easily adjust them without changing the code.
