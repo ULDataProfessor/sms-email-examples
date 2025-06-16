@@ -12,7 +12,7 @@ pyautogui.moveTo(100, 200, duration=1)
 pyautogui.click()
 
 # Type a message
-pyautogui.typewrite("Hello, this is an automated message!", interval=0.
+pyautogui.typewrite("Hello, this is an automated message!", interval=0.1)
                     
 # Press the Enter key
 pyautogui.press('enter')
