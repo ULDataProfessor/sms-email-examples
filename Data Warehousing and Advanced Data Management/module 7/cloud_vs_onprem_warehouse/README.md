@@ -1,0 +1,2 @@
+# cloud_vs_onprem_warehouse
+Choosing between cloud and on-premises data warehouses involves trade-offs in scalability, cost, and maintenance. Cloud solutions like AWS Redshift offer elasticity and managed services, while on-prem systems provide direct control over hardware. Organizations often evaluate security, performance, and budget when making this decision. This folder contrasts configuration steps for each approach.

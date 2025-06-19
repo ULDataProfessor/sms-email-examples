@@ -1,0 +1,2 @@
+# oltp_vs_olap
+Online Transaction Processing (OLTP) focuses on quick, atomic transactions for day-to-day operations. Online Analytical Processing (OLAP) supports complex queries over historical data to drive business insights. OLTP emphasizes speed and data integrity, while OLAP optimizes for aggregations and reporting. This folder demonstrates how the two styles differ when inserting, updating, and summarizing data.
