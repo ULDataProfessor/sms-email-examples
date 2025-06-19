@@ -1,0 +1,2 @@
+# type_effectiveness_materialized_view
+Type matchups determine the outcome of many battles in the Pokémon world. This module shows how to create a materialized view summarizing effectiveness relationships between types. By precomputing the results, queries about which types counter others run much faster. The example sets up base tables for types and effectiveness levels and demonstrates refreshing the view when data changes.

@@ -1,0 +1,2 @@
+# gym_leader_etl_pipeline
+Gym battles generate lots of data that needs to be normalized. This folder outlines an ETL flow for extracting battle CSVs, transforming them to a common schema, and loading them into a gym_battles table. With standardized data we can track leader performance and trainer success rates. The pipeline illustrates typical steps of cleaning, type conversion, and loading into a relational store.
