@@ -1,0 +1,2 @@
+# legendary_feature_store
+Legendary Pokémon possess unique qualities that make them prized for research and battle. This folder sketches a feature store capturing stats like base power, abilities, and generation for these rare creatures. Storing features centrally allows machine learning models to retrieve consistent, versioned data. The example outlines extracting features and registering them for later ML workflows.

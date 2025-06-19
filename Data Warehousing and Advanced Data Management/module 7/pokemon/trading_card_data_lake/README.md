@@ -1,0 +1,2 @@
+# trading_card_data_lake
+The Pokémon trading card game releases sets on a regular cadence and each set includes detailed card information. This directory demonstrates ingesting raw JSON card files into a date-partitioned data lake. Organizing by release date lets analysts quickly access cards from a specific set or timeframe. It also highlights how to organize semi-structured data for long-term storage.

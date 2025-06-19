@@ -1,0 +1,2 @@
+# pokemon_data_lineage
+As Pokémon data is transformed through various pipelines, it helps to track where each dataset originates. This example attaches lineage metadata to DataFrame operations and produces a simple graph of transformations. Understanding lineage aids in debugging and compliance by showing how final results were derived. The stub will maintain basic links between input and output datasets.

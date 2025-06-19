@@ -1,0 +1,2 @@
+# trade_cdc_simulation
+Pokémon trades happen frequently between trainers and can be tracked as a stream of change events. This project simulates capturing those events and applying them to a target dataset using Change Data Capture techniques. By processing insert and update events, we can maintain an up-to-date record of trades. The approach mirrors real-world CDC pipelines used for near real-time replication.
